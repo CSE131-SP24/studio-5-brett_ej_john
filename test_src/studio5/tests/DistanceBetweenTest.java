@@ -63,5 +63,8 @@ public class DistanceBetweenTest {
 		// Test that the distance between (0,0) and (30,40) is 50.0 (order of parameters matters!)
 		assertEquals(50.0, Methods.distanceBetween(0.0, 30.0, 0.0, 40.0), 1e-5);
 	}
+	
+	
+	
 
 }

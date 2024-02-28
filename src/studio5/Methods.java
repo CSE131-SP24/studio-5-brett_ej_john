@@ -14,7 +14,7 @@ public class Methods {
 	 * @return the Euclidean distance between (x1,y1) and (x2,y2)
 	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
-		double distance = 0;
+		double distance = Math.sqrt(Math.pow(x2 - x1,2)+Math.pow(y2 - y1,2));
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
 		
 		return distance;
@@ -35,16 +35,20 @@ public class Methods {
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
 
-		
+		StdDraw.setPenColor(StdDraw.BLUE);
+		StdDraw.filledCircle(x, y,(3.0/4.0)*radius);
 
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
 
-		
+		StdDraw.setPenColor(StdDraw.RED);
+		StdDraw.filledCircle(x, y,(3.0/6.0)*radius);
 
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
 
+		StdDraw.setPenColor(StdDraw.YELLOW);
+		StdDraw.filledCircle(x, y,(3.0/12.0)*radius);
 		
 	}
 
@@ -62,6 +66,15 @@ public class Methods {
 	public static String substituteAll(String source, char target, String replacement) {
 		String result = "";
 		// TODO: Finish this method
+		String tar=String.valueOf(target);
+		for (int i = 0; i<source.length(); i++) {
+			if(source.substring(i,i+1).equals(tar)) {
+				result+=replacement;
+			}
+			else {
+				result+=source.substring(i, i+1);
+			}
+		}
 		
 		return result;
 	}
@@ -73,7 +86,12 @@ public class Methods {
 	 * @return the sum of the elements in values
 	 */
 	public static int arraySum(int[] values) {
-		int sum = 0;
+		int sum = ;
+		int[] values = new int [];
+		for(int i =0; i < arrayLength; i++) {
+		
+		}
+		
 		// FIXME: Compute the sum of the values in an array
 		
 		return sum;
